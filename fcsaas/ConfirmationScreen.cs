@@ -14,7 +14,7 @@ namespace fcsaas
         private MiFareCard card;
         private readonly int Btnval;
         private readonly Form Form;
-        public ConfirmationScreen(int btnval,Form form)
+        public ConfirmationScreen(int btnval, Form form)
         {
             Form = form;
             if (btnval is not 1 or 2 or 3 or 4)
@@ -60,7 +60,7 @@ namespace fcsaas
                             if (Btnval == 1)
                             {
                                 MessageBox.Show("Finished action, click OK to close down");
-                                
+
                             }
                             else if (Btnval == 2)
                             {
@@ -79,7 +79,7 @@ namespace fcsaas
                             Close();
                         }
                     }
-                    if(rtrn < 1)
+                    if (rtrn < 1)
                         WriteMessage("Could not find the user, remove the card and try again");
 
 

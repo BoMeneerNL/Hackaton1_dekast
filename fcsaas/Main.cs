@@ -13,5 +13,11 @@ namespace fcsaas
             inplannen.Dispose();
 
         }
+
+        private void button4_Click(object sender, System.EventArgs e)
+        {
+            ConfirmationScreen cfscr = new(2, new Form());
+            cfscr.ShowDialog();
+        }
     }
 }
