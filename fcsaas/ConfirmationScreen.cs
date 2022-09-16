@@ -17,7 +17,7 @@ namespace fcsaas
         public ConfirmationScreen(int btnval, Form form)
         {
             Form = form;
-            if (btnval is not 1 or 2 or 3 or 4)
+            if (btnval < 1 || btnval > 4)
                 MessageBox.Show("An unknown error occured");
             else
                 Btnval = btnval;
@@ -72,7 +72,7 @@ namespace fcsaas
                             }
                             else if (Btnval == 4)
                             {
-
+                                MessageBox.Show("Spijtig om te zien dat je je abonnement opgezegd hebt, we hopen dat je weer een keer terug komt", "Spijtig om te horen dat je je abonnement op hebt gezegt");
                             }
 
                             Form.Close();

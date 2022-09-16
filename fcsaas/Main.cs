@@ -16,7 +16,13 @@ namespace fcsaas
 
         private void button4_Click(object sender, System.EventArgs e)
         {
-            ConfirmationScreen cfscr = new(2, new Form());
+            ConfirmationScreen cfscr = new(2, new Inplannen());
+            cfscr.ShowDialog();
+        }
+
+        private void button3_Click(object sender, System.EventArgs e)
+        {
+            ConfirmationScreen cfscr = new(4, new Inplannen());
             cfscr.ShowDialog();
         }
     }
