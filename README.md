@@ -22,3 +22,9 @@ To run this project you need to have:
   - NXP NTAG216 NFC card
 - An laptop or desktop running Windows 7 or higher
 - Visual Studio with WinForms tools downloaded (only to build or develop)
+
+## How to build this project
+1.  open the .sln file
+2.  build for the first time the debug and release version (if you only want to use one of them you don't need the other) without using the app yet (see step 3 for why)
+3.  after the first build is finished copy the /database/ folder to the same location as the executables (in: /fcsaas/bin/(release and/or debug)/net6.0-windows
+4.  now you're set to use the software as intented
