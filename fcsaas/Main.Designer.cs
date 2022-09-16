@@ -37,56 +37,57 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 122);
+            this.button1.Location = new System.Drawing.Point(12, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(438, 141);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Inschrijven voor een cursus";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 344);
+            this.button2.Location = new System.Drawing.Point(12, 308);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(438, 141);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Een afspraak maken met een personal coach";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(456, 344);
+            this.button3.Location = new System.Drawing.Point(456, 308);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(438, 141);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "Opzeggen";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(456, 122);
+            this.button4.Location = new System.Drawing.Point(456, 86);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(438, 141);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "Sportschool betreden";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(223, 38);
+            this.label1.Location = new System.Drawing.Point(124, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 35);
+            this.label1.Size = new System.Drawing.Size(660, 35);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.label1.Text = "Welkom bij sportschool De Kast, wat wil je vandaag doen?";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 495);
+            this.ClientSize = new System.Drawing.Size(904, 459);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -96,7 +97,7 @@
             this.Name = "Main";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mainscreen";
+            this.Text = "Welkom bij sportschool De Kast";
             this.ResumeLayout(false);
             this.PerformLayout();
 

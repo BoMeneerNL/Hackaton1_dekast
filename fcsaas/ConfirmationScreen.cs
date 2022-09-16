@@ -46,7 +46,7 @@ namespace fcsaas
                 var uid = await card.GetUid();
                 var ignored = BeginInvoke(() =>
                 {
-                    WriteMessage("Card detected. Do not remove while linking.");
+                    WriteMessage("Reading Card...");
                     txtUID.Text = BitConverter.ToString(uid).Replace("-", string.Empty);
                     List<string> Lines = File.ReadLines("database\\users.dbt").ToList();
                     int rtrn = 0;
@@ -80,7 +80,7 @@ namespace fcsaas
                         }
                     }
                     if(rtrn < 1)
-                        MessageBox.Show("Could not find the user, try again");
+                        WriteMessage("Could not find the user, remove the card and try again");
 
 
                 });
