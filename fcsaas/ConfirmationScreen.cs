@@ -62,10 +62,6 @@ namespace fcsaas
                                 MessageBox.Show("Finished action, click OK to close down");
 
                             }
-                            else if (Btnval == 2)
-                            {
-
-                            }
                             else if (Btnval == 3)
                             {
 

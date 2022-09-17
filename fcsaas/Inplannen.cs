@@ -20,17 +20,11 @@ namespace fcsaas
                 string[] ln = line.Split(";");
 
                 if (ln[0] == "pilates")
-                {
                     pilates.Add(ln[1]);
-                }
                 else if (ln[0] == "paaldansen")
-                {
                     paaldansen.Add(ln[1]);
-                }
                 else if (ln[0] == "yoga")
-                {
                     yoga.Add(ln[1]);
-                }
             }
         }
 
