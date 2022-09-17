@@ -3,6 +3,7 @@ using MiFare.Classic;
 using MiFare.Devices;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -52,8 +53,8 @@ namespace fcsaas
                     int rtrn = 0;
                     foreach (string Line in Lines)
                     {
-                        string ln = Line.Split(";").First();
-                        if (ln == txtUID.Text)
+                        string[] ln = Line.Split(";");
+                        if (ln[0] == txtUID.Text)
                         {
                             rtrn++;
                             WriteMessage("User found, Performing selected action");
@@ -61,6 +62,10 @@ namespace fcsaas
                             {
                                 MessageBox.Show("Finished action, click OK to close down");
 
+                            }
+                            else if(Btnval == 2)
+                            {
+                                Lines = File.ReadLines("").ToList();
                             }
                             else if (Btnval == 3)
                             {
