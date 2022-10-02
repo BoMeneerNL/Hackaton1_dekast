@@ -59,7 +59,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Paaldansen";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -71,7 +71,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Yoga";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
             // 
             // comboBox1
             // 
@@ -98,7 +98,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Keuze bevestigen";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label1
             // 

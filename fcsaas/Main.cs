@@ -10,17 +10,16 @@ namespace fcsaas
         {
             Inplannen inplannen = new();
             inplannen.ShowDialog();
-            inplannen.Dispose();
 
         }
 
-        private void button4_Click(object sender, System.EventArgs e)
+        private void Button4_Click(object sender, System.EventArgs e)
         {
             ConfirmationScreen cfscr = new(2, new Inplannen());
             cfscr.ShowDialog();
         }
 
-        private void button3_Click(object sender, System.EventArgs e)
+        private void Button3_Click(object sender, System.EventArgs e)
         {
             ConfirmationScreen cfscr = new(4, new Inplannen());
             cfscr.ShowDialog();

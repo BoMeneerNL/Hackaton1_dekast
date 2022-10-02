@@ -8,9 +8,9 @@ namespace fcsaas
 {
     public partial class Inplannen : Form
     {
-        public static List<string> pilates = new();
-        public static List<string> paaldansen = new();
-        public static List<string> yoga = new();
+        public static readonly List<string> Pilates = new();
+        public static readonly List<string> Paaldansen = new();
+        public static readonly List<string> Yoga = new();
         public Inplannen()
         {
             InitializeComponent();
@@ -18,17 +18,16 @@ namespace fcsaas
             foreach (string line in lines)
             {
                 string[] ln = line.Split(";");
-
                 if (ln[0] == "pilates")
-                    pilates.Add(ln[1]);
+                    Pilates.Add(ln[1]);
                 else if (ln[0] == "paaldansen")
-                    paaldansen.Add(ln[1]);
+                    Paaldansen.Add(ln[1]);
                 else if (ln[0] == "yoga")
-                    yoga.Add(ln[1]);
+                    Yoga.Add(ln[1]);
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             ConfirmationScreen cfscr = new(1, this);
             cfscr.ShowDialog();
@@ -39,20 +38,20 @@ namespace fcsaas
             if (radioButton1.Checked)
             {
                 comboBox1.Items.Clear();
-                comboBox1.Items.AddRange(pilates.ToArray());
+                comboBox1.Items.AddRange(Pilates.ToArray());
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(paaldansen.ToArray());
+            comboBox1.Items.AddRange(Paaldansen.ToArray());
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(yoga.ToArray());
+            comboBox1.Items.AddRange(Yoga.ToArray());
         }
     }
 }

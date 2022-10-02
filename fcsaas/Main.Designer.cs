@@ -62,7 +62,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Sportschool abonnement opzeggen";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -72,7 +72,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Sportschool betreden";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // label1
             // 
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 459);
+            this.ClientSize = new System.Drawing.Size(900, 455);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);

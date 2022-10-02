@@ -3,7 +3,6 @@ using MiFare.Classic;
 using MiFare.Devices;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Metrics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -63,9 +62,26 @@ namespace fcsaas
                                 MessageBox.Show("Finished action, click OK to close down");
 
                             }
-                            else if(Btnval == 2)
+                            else if (Btnval == 2)
                             {
-                                Lines = File.ReadLines("").ToList();
+                                Lines = File.ReadLines("database\\users.dbt").ToList();
+                                WriteMessage("Reading user data...");
+                                bool UserFound = false;
+                                Lines.ForEach(x =>
+                                {
+                                    Dictionary<string, string> valve = new()
+                                    {
+                                        { "uid", x.Split(";")[0] }
+                                    };
+                                    if (valve["uid"] == txtUID.Text)
+                                    {
+                                        UserFound = true;
+                                    }
+                                });
+                                if (UserFound)
+                                {
+                                    
+                                }
                             }
                             else if (Btnval == 3)
                             {
@@ -73,7 +89,12 @@ namespace fcsaas
                             }
                             else if (Btnval == 4)
                             {
-                                MessageBox.Show("Spijtig om te zien dat je je abonnement opgezegd hebt, we hopen dat je weer een keer terug komt", "Spijtig om te horen dat je je abonnement op hebt gezegt");
+                                PopupMessage("Spijtig om te zien dat je je abonnement opgezegd hebt, we hopen dat je weer een keer terug komt", "Spijtig om te horen dat je je abonnement op hebt gezegt");
+                                List<string> lines = File.ReadLines("database\\users.dbt").ToList();
+                                File.Delete("database\\users.dbt");
+                                lines.RemoveAll(x => x.StartsWith(txtUID.Text + ";"));
+                                File.AppendAllLines("database\\users.dbt", lines);
+                                
                             }
 
                             Form.Close();
@@ -143,10 +164,9 @@ namespace fcsaas
         }
 
         public void PopupMessage(string message) => BeginInvoke(() => { MessageBox.Show(message); });
+        public void PopupMessage(string message, string title) => BeginInvoke(() => { MessageBox.Show(message, title); });
         public void WriteMessage(string message) => BeginInvoke(() => { lblMessage.Text = message; });
-
         private void Main_Load(object sender, EventArgs e) => GetDevices();
-
         private void Button1_Click(object sender, EventArgs e) => Close();
     }
 }
