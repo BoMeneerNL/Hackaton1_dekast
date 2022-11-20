@@ -33,7 +33,7 @@ namespace fcsaas
             cfscr.ShowDialog();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
             {
